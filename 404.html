@@ -81,9 +81,9 @@
 
       
     </cover>
-    <header class="l_header no_sidebar pure">
+    <header class="l_header no_sidebar material">
   <div id="loading-bar-wrapper">
-    <div id="loading-bar" class="pure"></div>
+    <div id="loading-bar" class="material"></div>
   </div>
 
 	<div class="wrapper">
@@ -128,7 +128,7 @@
 			
 				<div class="m_search">
 					<form name="searchform" class="form u-search-form">
-						<input type="text" class="input u-search-input" placeholder="搜尋">
+						<input type="text" class="input u-search-input" placeholder="Search">
 						<i class="icon fas fa-search fa-fw"></i>
 					</form>
 				</div>
@@ -246,7 +246,7 @@
 
   <article class="post white-box comments">
     <section class="article typo">
-      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;評論</h4>
+      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;Comments</h4>
       
       
       
@@ -279,7 +279,7 @@
           
           
             <section class="widget author">
-  <div class="content pure">
+  <div class="content material">
     
       <div class="avatar">
         <img class="avatar" src="/img/avatar-hux.jpg">
@@ -339,12 +339,12 @@
           
             <section class="widget grid">
   
-<header class="pure">
+<header class="material">
   <div><i class="fas fa-map-signs fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;站内导航</div>
   
 </header>
 
-  <div class="content pure">
+  <div class="content material">
     <ul class="grid navgation">
       
         <li><a class="flat-box" title="/" href="/" id="home">
@@ -420,7 +420,7 @@
 
   <section class="widget music">
     
-<header class="pure">
+<header class="material">
   <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;最近在听</div>
   
     <a class="rightBtn" rel="external nofollow noopener noreferrer" target="_blank" href="https://music.163.com/#/user/home?id=63035382" title="https://music.163.com/#/user/home?id=63035382">
@@ -428,7 +428,7 @@
   
 </header>
 
-    <div class="content pure">
+    <div class="content material">
       
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
   <div class="aplayer" data-theme="#1BCDFC" data-mode="random" data-server="netease" data-type="playlist" data-id="2615636388" data-volume="0.7">
@@ -478,11 +478,11 @@
   
   <br>
   <div>
-    本站使用
+    Use
     <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a>
     as theme
     
-      ，
+      , 
       <span id="busuanzi_container_site_uv">
         本站访客数<span id="busuanzi_value_site_uv"></span>人次
       </span>
@@ -490,7 +490,7 @@
         本文总阅读量<span id="busuanzi_value_page_pv"></span>次
       </span>
     
-    。
+    . 
   </div>
 </footer>
 <script>setLoadingBarProgress(80);</script>
@@ -549,6 +549,31 @@
 
 
 
+  
+  
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        if ('') {
+          $('').backstretch(
+          ["https://img.vim-cn.com/d5/b004c81a13aea401375d03b1258ecadbfcbaa7.jpg"],
+          {
+            duration: "",
+            fade: ""
+          });
+        } else {
+          $.backstretch(
+          ["https://img.vim-cn.com/d5/b004c81a13aea401375d03b1258ecadbfcbaa7.jpg"],
+          {
+            duration: "",
+            fade: ""
+          });
+        }
+      });
+    </script>
+  
+
 
 
 
@@ -587,15 +612,15 @@
 <!-- 复制 -->
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script>
-  let COPY_SUCCESS = "複製成功";
-  let COPY_FAILURE = "複製失敗";
+  let COPY_SUCCESS = "Copied";
+  let COPY_FAILURE = "Copy failed";
   /*页面载入完成后，创建复制按钮*/
   !function (e, t, a) {
     /* code */
     var initCopyCode = function(){
       var copyHtml = '';
       copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-      copyHtml += '  <i class="fa fa-copy"></i><span>複製</span>';
+      copyHtml += '  <i class="fa fa-copy"></i><span>Copy</span>';
       copyHtml += '</button>';
       $(".highlight .code pre").before(copyHtml);
       var clipboard = new ClipboardJS('.btn-copy', {
