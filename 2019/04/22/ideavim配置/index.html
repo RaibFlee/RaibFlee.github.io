@@ -128,7 +128,7 @@
 			
 				<div class="m_search">
 					<form name="searchform" class="form u-search-form">
-						<input type="text" class="input u-search-input" placeholder="搜索">
+						<input type="text" class="input u-search-input" placeholder="Search">
 						<i class="icon fas fa-search fa-fw"></i>
 					</form>
 				</div>
@@ -292,7 +292,7 @@
 
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
-          <p>配置文件：.ideavimrc（UTF-8格式，纯文本文件）</p>
+          <p>#ideavim<br>配置文件：.ideavimrc（UTF-8格式，纯文本文件）</p>
 <p>存放路径：C:\user\用户名.ideavimrc<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#替换查找</span><br><span class="line">noremap / :action Find&lt;CR&gt;</span><br><span class="line">#替换acejump,acejump是一个插件</span><br><span class="line">noremap u :action AceAction&lt;CR&gt;</span><br><span class="line">noremap U :action AceTargetAction&lt;CR&gt;</span><br><span class="line">&quot; 显示当前的模式</span><br><span class="line">set showmode</span><br><span class="line">&quot; 共享系统粘贴板</span><br><span class="line">set clipboard=unnamed</span><br></pre></td></tr></table></figure></p>
 
         </div>
@@ -305,10 +305,10 @@
     <div class="new-meta-box">
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-04-22T15:12:12+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-04-22T22:26:21+08:00">
   <a class="notlink">
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 Apr 22, 2019</p>
+    <p>last updated at Apr 22, 2019</p>
   </a>
 </div>
 
@@ -369,7 +369,7 @@
                 
                     <section class="next">
                         <span class="art-item-right" aria-hidden="true">
-                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h6>Next&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
                                 <a href="/2019/04/20/my-first-blog/" rel="prev" title="my-first-blog">
                                     
@@ -394,7 +394,7 @@
 
   <article class="post white-box comments">
     <section class="article typo">
-      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
+      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;Comments</h4>
       
       
       
@@ -539,7 +539,7 @@
   <section class="widget category">
     
 <header class="pure">
-  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章分类</div>
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;Categories</div>
   
     <a class="rightBtn" rel="nofollow" href="/categories/" title="categories/">
     <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
@@ -566,7 +566,7 @@
   <section class="widget tagcloud">
     
 <header class="pure">
-  <div><i class="fas fa-fire fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  <div><i class="fas fa-fire fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;Hot Tags</div>
   
     <a class="rightBtn" rel="nofollow" href="/tags/" title="tags/">
     <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
@@ -643,11 +643,11 @@
   
   <br>
   <div>
-    本站使用
+    Use
     <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a>
-    作为主题
+    as theme
     
-      ，
+      , 
       <span id="busuanzi_container_site_uv">
         本站访客数<span id="busuanzi_value_site_uv"></span>人次
       </span>
@@ -655,7 +655,7 @@
         本文总阅读量<span id="busuanzi_value_page_pv"></span>次
       </span>
     
-    。
+    . 
   </div>
   <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
 <script>
@@ -794,15 +794,15 @@ setInterval("createtime()",250);
 <!-- 复制 -->
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script>
-  let COPY_SUCCESS = "复制成功";
-  let COPY_FAILURE = "复制失败";
+  let COPY_SUCCESS = "Copied";
+  let COPY_FAILURE = "Copy failed";
   /*页面载入完成后，创建复制按钮*/
   !function (e, t, a) {
     /* code */
     var initCopyCode = function(){
       var copyHtml = '';
       copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-      copyHtml += '  <i class="fa fa-copy"></i><span>复制</span>';
+      copyHtml += '  <i class="fa fa-copy"></i><span>Copy</span>';
       copyHtml += '</button>';
       $(".highlight .code pre").before(copyHtml);
       var clipboard = new ClipboardJS('.btn-copy', {
