@@ -128,7 +128,7 @@
 			
 				<div class="m_search">
 					<form name="searchform" class="form u-search-form">
-						<input type="text" class="input u-search-input" placeholder="搜尋">
+						<input type="text" class="input u-search-input" placeholder="Search">
 						<i class="icon fas fa-search fa-fw"></i>
 					</form>
 				</div>
@@ -212,7 +212,7 @@
       
         
           <div class="post-wrapper">
-            <article class="post reveal no-title">
+            <article class="post reveal ">
   
 
 
@@ -224,7 +224,7 @@
         
   <h2 class="title">
     <a href="/2019/05/05/python方法和函数/">
-      2019-05-05
+      python方法和函数
     </a>
   </h2>
 
@@ -260,6 +260,14 @@
         
           
             
+  
+  <div class="new-meta-item category">
+    <a href="/categories/编程/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>编程</p>
+    </a>
+  </div>
+
 
           
         
@@ -283,14 +291,22 @@
 
   <section class="article typo">
     <div class="article-entry" itemprop="articleBody">
-      <p>在Python中，函数和方法其实是一个相对的概念，只不过方法会有一个默认参数self，但可以互相转化，也可以在创建实例后动态的添加。<br>下面用代码演示：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span><span class="comment">#创建一个类</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">print</span><span class="params">(self)</span>:</span></span><br><span class="line">		print(<span class="string">'A'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = A()</span><br><span class="line">print(type(a.<span class="keyword">print</span>))</span><br><span class="line"><span class="comment">#结果：&lt;class 'method'&gt;</span></span><br><span class="line">print(type(A.<span class="keyword">print</span>))</span><br><span class="line"><span class="comment">#结果：&lt;class 'function'&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>从代码中可以看出print()方法对于实例来说是个方法，而对于类来说只是一个函数。<br>如果想要动态地添加方法和函数，可以直接指定。代码如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span><span class="comment">#创建一个类</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">print</span><span class="params">(self)</span>:</span></span><br><span class="line">		print(<span class="string">'A'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print2</span><span class="params">(self)</span>:</span><span class="comment">#创建一个函数</span></span><br><span class="line">	print(<span class="string">'print2'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = A()</span><br><span class="line">a.print2=print2 <span class="comment">#相当于a对象创建了一个print2属性，并将print2函数赋值给它，</span></span><br><span class="line">a.print2()</span><br><span class="line"><span class="comment">#结果：print2</span></span><br><span class="line">print(type(a.print2))</span><br><span class="line"><span class="comment">#结果：&lt;class 'function'&gt;</span></span><br><span class="line"><span class="comment">#结果表明这样添加的是函数（并且只对a对象生效,类和其他对象无效）</span></span><br></pre></td></tr></table></figure></p>
-<p>如果对类直接赋值<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span><span class="comment">#创建一个类</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">print</span><span class="params">(self)</span>:</span></span><br><span class="line">		print(<span class="string">'A'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print2</span><span class="params">()</span>:</span><span class="comment">#创建一个函数</span></span><br><span class="line">	print(<span class="string">'print2'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = A()</span><br><span class="line">A.print2=print2</span><br><span class="line">A.print2()</span><br><span class="line"><span class="comment">#结果：print2</span></span><br><span class="line">print(type(A.print2))</span><br><span class="line"><span class="comment">#结果：&lt;class 'function'&gt;</span></span><br><span class="line">print(type(a.print2))</span><br><span class="line"><span class="comment">#结果：&lt;class 'method'&gt;</span></span><br><span class="line">a.print2()</span><br><span class="line"><span class="comment">#结果：TypeError: print2() takes 0 positional arguments but 1 was given</span></span><br></pre></td></tr></table></figure></p>
-<p>从代码中可以看出如果对类直接赋值，类增加了一个函数，而对象增加一个方法(所有对象都会有这个方法)，最后a对象执行报错，是因为方法会自动传入一个self参数，而原本的print2函数没有参数。</p>
-<h1 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h1><p>我们判断是否为函数或方法，主要看执行时是否会自动传入一个参数。</p>
-
+      <p>在Python中，函数和方法其实是一个相对的概念，只不过方法会有一个默认参数self，但可以互相转化，也可以在创建实例后动态的添加。<br>下面用代码演示：<br>
       
-    </div>
+        <div class="readmore">
+          <a href="/2019/05/05/python方法和函数/" class="flat-box">
+            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+            Read More
+          </a>
+        </div>
+      
+    </p></div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/Pyhon/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>Pyhon</a>
+        
+      </div>
     
   </section>
 </article>
@@ -607,7 +623,7 @@
   <section class="widget category">
     
 <header class="pure">
-  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章分類</div>
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;Categories</div>
   
     <a class="rightBtn" rel="nofollow" href="/categories/" title="categories/">
     <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
@@ -616,6 +632,8 @@
 
     <div class="content pure">
       <ul class="entry">
+        
+          <li><a class="flat-box" title="/categories/编程/" href="/categories/编程/"><div class="name">编程</div><div class="badge">(1)</div></a></li>
         
           <li><a class="flat-box" title="/categories/软件/" href="/categories/软件/"><div class="name">软件</div><div class="badge">(1)</div></a></li>
         
@@ -634,7 +652,7 @@
   <section class="widget tagcloud">
     
 <header class="pure">
-  <div><i class="fas fa-fire fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;熱門標籤</div>
+  <div><i class="fas fa-fire fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;Hot Tags</div>
   
     <a class="rightBtn" rel="nofollow" href="/tags/" title="tags/">
     <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
@@ -642,7 +660,7 @@
 </header>
 
     <div class="content pure">
-      <a href="/tags/pycharm/" style="font-size: 14px; color: #999">pycharm</a>
+      <a href="/tags/Pyhon/" style="font-size: 14px; color: #999">Pyhon</a> <a href="/tags/pycharm/" style="font-size: 14px; color: #999">pycharm</a>
     </div>
   </section>
 
@@ -711,11 +729,11 @@
   
   <br>
   <div>
-    本站使用
+    Use
     <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a>
-    作为主题
+    as theme
     
-      ，
+      , 
       <span id="busuanzi_container_site_uv">
         本站访客数<span id="busuanzi_value_site_uv"></span>人次
       </span>
@@ -723,7 +741,7 @@
         本文总阅读量<span id="busuanzi_value_page_pv"></span>次
       </span>
     
-    。
+    . 
   </div>
   <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
 <script>
@@ -845,15 +863,15 @@ setInterval("createtime()",250);
 <!-- 复制 -->
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script>
-  let COPY_SUCCESS = "複製成功";
-  let COPY_FAILURE = "複製失敗";
+  let COPY_SUCCESS = "Copied";
+  let COPY_FAILURE = "Copy failed";
   /*页面载入完成后，创建复制按钮*/
   !function (e, t, a) {
     /* code */
     var initCopyCode = function(){
       var copyHtml = '';
       copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-      copyHtml += '  <i class="fa fa-copy"></i><span>複製</span>';
+      copyHtml += '  <i class="fa fa-copy"></i><span>Copy</span>';
       copyHtml += '</button>';
       $(".highlight .code pre").before(copyHtml);
       var clipboard = new ClipboardJS('.btn-copy', {
